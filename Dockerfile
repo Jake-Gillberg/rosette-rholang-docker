@@ -75,5 +75,6 @@ WORKDIR /Rholang
 RUN `
   sed -i '/cup/ s]$] from "file:///usr/share/java/cup.jar"]' build.sbt `
   && sed -i '/JLex/ s]$] from "file:///usr/share/java/JLex.jar"]' build.sbt `
-  && sbt bnfc:generate
+  && sbt bnfc:generate `
+  && sbt console
 WORKDIR /
