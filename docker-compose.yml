@@ -2,7 +2,7 @@ version: '3'
 services:
     
     dev:
-        container_name: rhovm
+        container_name: rosette-rholang
         build: .
-        image: rhovm-image
+        image: rosette-rholang-image
         tty: true
