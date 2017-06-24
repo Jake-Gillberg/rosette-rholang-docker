@@ -1,7 +1,7 @@
 version: '3'
 services:
     
-    dev:
+    rchain:
         container_name: rosette-rholang
         build: .
         image: rosette-rholang-image

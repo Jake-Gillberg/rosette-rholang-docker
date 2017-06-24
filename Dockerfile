@@ -51,7 +51,7 @@ RUN `
   && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 `
     --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
 
-# Java is a depndency of the dependencies
+# Java is a dependency of the dependencies
 RUN `
   apt-get update `
   && apt-get install -y --no-install-recommends `
@@ -70,7 +70,7 @@ RUN `
 
 # Get and build rholang
 RUN `
-  git clone --depth=1 git://github.com/rchain/Rholang.git
+  git clone --depth=1 --single-branch --branch source-to-source-rosette git://github.com/rchain/Rholang.git
 WORKDIR /Rholang
 RUN `
   sed -i '/cup/ s]$] from "file:///usr/share/java/cup.jar"]' build.sbt `
